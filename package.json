@@ -1,5 +1,5 @@
 {
-  "name": "bootstream",
+  "name": "bootevent",
   "version": "0.0.0",
   "description": "async bootup to grab resources before beginning a process",
   "main": "index.js",
@@ -10,5 +10,13 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "chainsaw": "~0.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bewest/bootevent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bewest/bootevent/issues"
   }
 }

@@ -6,9 +6,10 @@ function builtins (saw) {
   };
 
   this.acquire = function (cb) {
+    var ctx = this.ctx( );
     saw.nest(false, function ( ) {
       var next = saw.next;
-      cb(this.ctx( ), next);
+      cb(ctx, next);
     });
   };
 
@@ -20,10 +21,16 @@ function builtins (saw) {
 }
 
 function create (input, booted) {
-  var _input = input;
-  return chainsaw(function init (saw) {
+  var _input = input || { };
+  var api = chainsaw(function init (saw) {
+    function orig ( ) {
+      return _input;
+    };
     this.ctx = function (_) {
-      return this._input;
+      if (_) {
+        _input = _;
+      }
+      return orig( );
     };
     builtins.call(this, saw);
 
@@ -40,6 +47,7 @@ function create (input, booted) {
       }
     };
   });
+  return api;
 
 }
 
