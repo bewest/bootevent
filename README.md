@@ -47,6 +47,19 @@ assign it to your context.
   ;
 ```
 
+```
+{ ctx: [Function],
+  tap: [Function],
+  acquire: [Function],
+  fail: [Function],
+  boot: [Function] }
+context during acquiring db {} { '0': {}, '1': [Function] }
+starting acquire { '0': {}, '1': [Function] }
+simulated later {}
+START PROCESS { '0': { timeout: 2001 } }
+
+```
+
 It's a "fluent" API so you can stack as many `acquire` calls calss as
 needed.
 
