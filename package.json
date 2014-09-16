@@ -1,0 +1,14 @@
+{
+  "name": "bootstream",
+  "version": "0.0.0",
+  "description": "async bootup to grab resources before beginning a process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben West",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "chainsaw": "~0.1.0"
+  }
+}
