@@ -1,10 +1,9 @@
 {
   "name": "bootevent",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "async bootup to grab resources before beginning a process",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Ben West",
   "license": "BSD-2-Clause",
   "dependencies": {
